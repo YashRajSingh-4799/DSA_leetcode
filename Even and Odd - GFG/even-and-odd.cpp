@@ -11,12 +11,14 @@ class Solution {
     void reArrange(int a[], int n) {
         // code here
         int i=0,j=1;
-        while(i<n && j<n){
+        while(i<n && j<n)
+        {
             while(i<n && a[i]%2 == 0)
                 i+=2;
             while(j<n && a[j]%2 == 1)
                 j+=2;
-            if(i<n && j<n){
+            if(i<n && j<n)
+            {
                 swap(a[i],a[j]);
             }
         }
