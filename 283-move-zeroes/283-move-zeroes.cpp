@@ -3,11 +3,11 @@ class Solution
     public:
         void moveZeroes(vector<int> &nums)
         {
-            for (int lastNonZeroFoundAt = 0, cur = 0; cur < nums.size(); cur++)
+            for (int i = 0, j = 0; j < nums.size(); j++)
             {
-                if (nums[cur] != 0)
+                if (nums[j] != 0)
                 {
-                    swap(nums[lastNonZeroFoundAt++], nums[cur]);
+                    swap(nums[i++], nums[j]);
                 }
             }
         }
