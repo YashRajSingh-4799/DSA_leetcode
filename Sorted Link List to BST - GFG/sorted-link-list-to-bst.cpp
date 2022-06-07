@@ -70,9 +70,11 @@ struct TNode
         left=right=NULL;
     }
 }; */
-class Solution{
+class Solution
+{
   public:
-    TNode* construct(int low, int high, vector<int>& arr){
+    TNode* construct(int low, int high, vector<int>& arr)
+    {
         if(low > high)
             return NULL;
         int mid = ceil((float) (low+high)/2);
@@ -82,10 +84,13 @@ class Solution{
         root->right = construct(mid+1,high,arr);
         return root;
     }
-    TNode* sortedListToBST(LNode *head) {
+    
+    TNode* sortedListToBST(LNode *head)
+    {
         //code here
         vector<int> arr;
-        while(head){
+        while(head)
+        {
             arr.push_back(head->data);
             head=head->next;
         }
